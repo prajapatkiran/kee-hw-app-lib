@@ -1,0 +1,16 @@
+# Node generated files
+node_modules
+npm-debug.log
+
+docs
+support
+src
+test
+testing
+examples
+**/*.spec.*
+
+
+# OS generated files
+Thumbs.db
+.DS_Store
