@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'kee-app-abcd',
-  templateUrl: './abcd.component.html',
-  styleUrls: ['./abcd.component.css']
+  template: `<p>
+    abcd works!
+  </p>`,
+  styles: []
 })
 export class AbcdComponent implements OnInit {
 

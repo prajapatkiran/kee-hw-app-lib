@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'kee-hello-world',
-  templateUrl: './hello-world.component.html',
-  styleUrls: ['./hello-world.component.css']
+  template: `<p>
+    Hello, World! from a componnt!
+  </p>`,
+  styles: []
 })
 export class HelloWorldComponent implements OnInit {
 
