@@ -13,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
     <a routerLink="/kee-hw-app/hello-world-sub" routerLinkActive="active">Kee Hello World -:Sub:- Route!</a>
   </nav>
   <router-outlet></router-outlet>`,
-  styles: [``]
+  styles: []
 })
 export class HwAppComponent implements OnInit {
 
