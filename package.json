@@ -1,8 +1,11 @@
 {
   "name": "kee-hw-app-module",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "A hello world app as a module.",
   "main": "lib/kee-hw-app-module.js",
+  "module": "index.js",
+  "typings": "index.d.ts",
+  "angular-cli": {},
   "dependencies": {
     "@angular/common": "^2.3.1",
     "@angular/compiler": "^2.3.1",
@@ -21,7 +24,9 @@
   },
   "devDependencies": {
     "@angular/cli": "^1.0.0-beta.32.3",
-    "@angular/compiler-cli": "^2.3.1",
+    "@angular/compiler": "^2.4.8",
+    "@angular/compiler-cli": "^2.4.8",
+    "@angular/platform-server": "^2.4.8",
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",
     "codelyzer": "~2.0.0-beta.1",
@@ -35,11 +40,15 @@
     "protractor": "~4.0.13",
     "ts-node": "1.2.1",
     "tslint": "^4.3.0",
-    "typescript": "~2.0.3"
+    "typescript": "^2.1.6"
   },
   "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
     "test": "ng test",
-    "prepublish": "rm -Rf lib && tsc"
+    "prepublish": "rm -Rf lib && ngc",
+    "pree2e": "webdriver-manager update --standalone false --gecko false",
+    "e2e": "protractor"
   },
   "typescript": {
     "definition": "index.d.ts"

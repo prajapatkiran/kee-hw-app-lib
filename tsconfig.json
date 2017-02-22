@@ -10,8 +10,11 @@
         "declaration": true,
         "outDir": "lib"
     },
+    "angularCompilerOptions": {
+        "genDir": "compiled"
+    },
     "files": [
-        "src/kee-hw-app-module.ts"
+        "src/index.ts"
     ],
     "exclude": [
         "node_modules",
