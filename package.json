@@ -1,6 +1,6 @@
 {
   "name": "kee-hw-app-module",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A hello world app as a module.",
   "main": "lib/kee-hw-app-module.js",
   "module": "index.js",
@@ -46,7 +46,8 @@
     "ng": "ng",
     "start": "ng serve",
     "test": "ng test",
-    "prepublish": "rm -Rf lib && ngc",
+    "prepublish": "echo 'Preapring to publish...' && rm -Rf lib && ngc -p tsconfig.json",
+    "postpublish": "echo upgrading version number && npm version patch -m 'Upgrading version number after npm publish'",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "protractor"
   },
@@ -62,5 +63,8 @@
   "bugs": {
     "url": "https://github.com/prajapatkiran/kee-hw-app-lib/issues"
   },
-  "homepage": "https://github.com/prajapatkiran/kee-hw-app-lib#readme"
+  "homepage": "https://github.com/prajapatkiran/kee-hw-app-lib#readme",
+  "files": [
+    "lib"
+  ]
 }
