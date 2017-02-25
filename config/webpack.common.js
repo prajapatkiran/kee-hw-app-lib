@@ -50,7 +50,7 @@ module.exports = function(options = {}) {
                     use: ExtractTextPlugin.extract({
                         fallback: 'style-loader',
                         //resolve-url-loader may be chained before sass-loader if necessary
-                        use: ['css-loader', 'sass-loader']
+                        use: ['to-string-loader', 'css-loader', 'postcss-loader?sourceMap', 'sass-loader?sourceMap']
                     })
                 }
                 // ,
