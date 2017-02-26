@@ -35,7 +35,7 @@ module.exports = function(env) {
     },
     output: {
       path: dir('lib'),
-      libraryTarget: 'umd',
+      libraryTarget: 'commonjs',
       library: 'kee-hw-app-module',
       umdNamedDefine: true
     },
