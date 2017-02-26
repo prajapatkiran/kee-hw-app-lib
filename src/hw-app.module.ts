@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MaterialModule } from '@angular/material';
 
 import { HwAppComponent } from './hw-app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
@@ -11,6 +12,7 @@ import { HwAppRoutingModule } from './hw-app.routing.module';
 @NgModule({
   imports: [
     CommonModule,
+    MaterialModule,
     HwAppRoutingModule
   ],
   declarations: [
