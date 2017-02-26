@@ -3,6 +3,7 @@ const autoprefixer = require('autoprefixer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { ENV, IS_PRODUCTION, APP_VERSION, IS_DEV, dir } = require('./helpers');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const { CheckerPlugin } = require('awesome-typescript-loader');
 
 module.exports = function(options = {}) {
     console.log('>--> Webpack Common.js....');
@@ -34,6 +35,14 @@ module.exports = function(options = {}) {
                     }
                 },
                 {
+                  test: /\.ts$/,
+                  loaders: [
+                    'awesome-typescript-loader',
+                    'angular2-template-loader'
+                  ],
+                  exclude: [/\.(spec|e2e|d)\.ts$/]
+                },
+                {
                     test: /\.html$/,
                     loader: 'raw-loader'
                 },
@@ -50,7 +59,8 @@ module.exports = function(options = {}) {
                     use: ExtractTextPlugin.extract({
                         fallback: 'style-loader',
                         //resolve-url-loader may be chained before sass-loader if necessary
-                        use: ['to-string-loader', 'css-loader', 'postcss-loader?sourceMap', 'sass-loader?sourceMap']
+                        // use: ['to-string-loader', 'css-loader', 'postcss-loader?sourceMap', 'sass-loader?sourceMap']
+                        use: ['raw-loader', 'sass-loader']
                     })
                 }
                 // ,
@@ -75,6 +85,8 @@ module.exports = function(options = {}) {
             ]
         },
         plugins: [
+
+            new CheckerPlugin(),
             new ExtractTextPlugin({
                 filename: '[name].css',
                 allChunks: true
