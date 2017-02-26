@@ -35,14 +35,6 @@ module.exports = function(options = {}) {
                     }
                 },
                 {
-                  test: /\.ts$/,
-                  loaders: [
-                    'awesome-typescript-loader',
-                    'angular2-template-loader'
-                  ],
-                  exclude: [/\.(spec|e2e|d)\.ts$/, dir('node_modules')]
-                },
-                {
                     test: /\.html$/,
                     loader: 'raw-loader'
                 },
