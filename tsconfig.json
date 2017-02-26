@@ -10,6 +10,9 @@
         "declaration": true,
         "outDir": "lib"
     },
+    "awesomeTypescriptLoaderOptions": {
+      "compiler": "@angular/compiler"
+    },
     "angularCompilerOptions": {
         "genDir": "compiled"
     },
