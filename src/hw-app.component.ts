@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 
 @Component({
-  selector: 'kee-hw-app',
+  selector: "kee-hw-app",
   template: `<p>
     hw-app works!
     <kee-app-abcd></kee-app-abcd>
@@ -13,7 +13,8 @@ import { Component, OnInit } from '@angular/core';
     <a routerLink="/kee-hw-app/hello-world-sub" routerLinkActive="active">Kee Hello World -:Sub:- Route!</a>
   </nav>
   <router-outlet></router-outlet>`,
-  styleUrls: ['./hw-app.component.scss']
+  styleUrls: ["./hw-app.component.scss"],
+  encapsulation: ViewEncapsulation.None
 })
 export class HwAppComponent implements OnInit {
 
