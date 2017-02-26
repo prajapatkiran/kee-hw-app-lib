@@ -40,7 +40,7 @@ module.exports = function(options = {}) {
                     'awesome-typescript-loader',
                     'angular2-template-loader'
                   ],
-                  exclude: [/\.(spec|e2e|d)\.ts$/]
+                  exclude: [/\.(spec|e2e|d)\.ts$/, dir('node_modules')]
                 },
                 {
                     test: /\.html$/,
