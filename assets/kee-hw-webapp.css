@@ -1,3 +1,6 @@
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
 body {
   font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
   text-align: left;

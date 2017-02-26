@@ -5,7 +5,12 @@ import { Component, OnInit } from '@angular/core';
   template: `<p>
     Hello, World! from a componnt!
   </p>`,
-  styles: []
+  styles: [
+    `p {
+      background-color: 2px solid gray;
+      padding: 10px;
+    }`
+  ]
 })
 export class HelloWorldComponent implements OnInit {
 

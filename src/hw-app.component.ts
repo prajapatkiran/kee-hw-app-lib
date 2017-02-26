@@ -14,7 +14,7 @@ import { Component, OnInit, ViewEncapsulation } from "@angular/core";
   </nav>
   <router-outlet></router-outlet>`,
   styles: [
-    `.p {
+    `p {
       border: 2px solid red;
       padding: 30px;
     }`
