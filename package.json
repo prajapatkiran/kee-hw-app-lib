@@ -18,6 +18,7 @@
     "@angular/router": "^3.3.1",
     "core-js": "^2.4.1",
     "es6-shim": "^0.35.3",
+    "path": "^0.12.7",
     "reflect-metadata": "^0.1.9",
     "rxjs": "^5.2.0",
     "ts-helpers": "^1.1.1",
@@ -63,15 +64,18 @@
   },
   "scripts": {
     "clean:lib": "rm -Rf lib",
+    "copy:styles": "cpx 'src/**/*.scss' lib",
+    "copy:html": "cpx 'src/**/*.html' lib",
     "ng": "ng",
-    "package": "npm-run-all -s clean:lib package:aot",
+    "package": "npm-run-all -s clean:lib package:aot copy:html copy:styles inline",
     "package:aot": "ngc -p tsconfig.json",
     "postpublish": "echo 'Upgrading version number...' && npm version patch -m 'Upgrading version number after npm publish'",
     "prepublish": "echo 'Running prepublish...' && npm run package",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "start": "ng serve",
     "test": "ng test",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "inline": "gulp :inline-resources"
   },
   "typescript": {
     "definition": "index.d.ts"
