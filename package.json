@@ -1,6 +1,6 @@
 {
   "name": "kee-hw-app-module",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A hello world app as a module.",
   "main": "lib/kee-hw-app-module.js",
   "module": "index.js",
