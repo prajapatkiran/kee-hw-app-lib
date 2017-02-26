@@ -20,14 +20,14 @@ module.exports = function(env) {
     module: {
       exprContextCritical: false,
       rules: [
-        // {
-        //   test: /\.ts$/,
-        //   loaders: [
-        //     'awesome-typescript-loader',
-        //     'angular2-template-loader'
-        //   ],
-        //   exclude: [/\.(spec|e2e|d)\.ts$/]
-        // }
+        {
+          test: /\.ts$/,
+          loaders: [
+            'awesome-typescript-loader',
+            'angular2-template-loader'
+          ],
+          exclude: [/\.(spec|e2e|d)\.ts$/]
+        }
       ]
     },
     entry: {
