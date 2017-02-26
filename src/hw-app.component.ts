@@ -13,7 +13,12 @@ import { Component, OnInit, ViewEncapsulation } from "@angular/core";
     <a routerLink="/kee-hw-app/hello-world-sub" routerLinkActive="active">Kee Hello World -:Sub:- Route!</a>
   </nav>
   <router-outlet></router-outlet>`,
-  styleUrls: ["./hw-app.component.scss"]
+  styles: [
+    `.p {
+      border: 2px solid red;
+      padding: 30px;
+    }`
+  ]
 })
 export class HwAppComponent implements OnInit {
 
